@@ -42,22 +42,28 @@ main {
 }
 
 /* Grade de produtos */
+
 .lista-produtos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
+  gap: 30px;
+  align-items: stretch;
 }
 
 /* Rodapé */
+
 footer {
   background-color: #14213d;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 24px 15px;
   margin-top: 60px;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 /* Adaptação para celulares */
+
 @media (max-width: 600px) {
   header h1 {
     font-size: 28px;
@@ -69,6 +75,24 @@ footer {
 
   main {
     margin: 25px auto;
+    padding: 0 15px;
+  }
+
+  .lista-produtos {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 18px;
+  }
+
+  .produto-info {
+    padding: 12px;
+  }
+
+  .produto h3 {
+    font-size: 16px;
+  }
+
+  .preco {
+    font-size: 20px;
   }
 }
 
@@ -92,8 +116,11 @@ footer {
 .produto img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  padding: 12px;
+  background-color: #ffffff;
+  box-sizing: border-box;
 }
 
 .produto-info {
@@ -102,20 +129,30 @@ footer {
 
 .categoria {
   display: inline-block;
-  color: #526581;
-  font-size: 13px;
-  margin-bottom: 10px;
+  color: #14213d;
+  background-color: #e8f4fc;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
 }
 
 .produto h3 {
   font-size: 19px;
+  font-weight: 600;
+  color: #14213d;
+  margin-top: 8px;
   margin-bottom: 12px;
+  line-height: 1.4;
 }
 
 .preco {
-  color: #087443;
-  font-size: 21px;
-  font-weight: bold;
+  color: #14213d;
+  font-size: 23px;
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 10px;
 }
 
 /* Botão para limpar os filtros */
