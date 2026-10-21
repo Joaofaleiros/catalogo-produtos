@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Produtos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Meu Catálogo</h1>
+      <p>Encontre os produtos que você procura</p>
+    </header>
+
+    <main>
+      <section class="catalogo">
+        <h2>Nossos Produtos</h2>
+
+        <div class="filtros">
+          <input type="text" id="campo-busca" placeholder="Buscar produto..." />
+
+          <select id="filtro-categoria">
+            <option value="Todos">Todas as categorias</option>
+            <option value="Eletrônicos">Eletrônicos</option>
+            <option value="Acessórios">Acessórios</option>
+          </select>
+
+          <button type="button" id="limpar-filtros">Limpar filtros</button>
+        </div>
+        <p id="contador-produtos">Exibindo 4 produtos</p>
+        <div id="lista-produtos" class="lista-produtos">
+          <!-- Os produtos serão adicionados aqui -->
+        </div>
+
+        <p id="mensagem-vazia" hidden>Nenhum produto encontrado.</p>
+
+        <div id="modal-produto" class="modal" hidden>
+          <div class="modal-conteudo">
+            <button
+              type="button"
+              id="fechar-modal"
+              class="fechar-modal"
+              aria-label="Fechar detalhes"
+            >
+              &times;
+            </button>
+
+            <img id="modal-imagem" src="" alt="" />
+
+            <span id="modal-categoria" class="categoria"></span>
+            <h2 id="modal-nome"></h2>
+            <p id="modal-descricao"></p>
+            <p id="modal-preco" class="preco"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 - Meu Catálogo de Produtos</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
