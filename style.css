@@ -243,3 +243,9 @@ footer {
   background-color: #70d6ff;
   color: #14213d;
 }
+.logo-catalogo {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px;
+}
