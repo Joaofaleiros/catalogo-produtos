@@ -20,16 +20,28 @@
 
     <main>
       <section class="catalogo">
-        <h2>Nossos Produtos</h2>
+        <section class="catalogo">
+  <h2>Nossos Produtos</h2>
 
-        <div class="filtros">
-          <input type="text" id="campo-busca" placeholder="Buscar produto..." />
+  <div class="filtros">
+    <input type="text" id="campo-busca" placeholder="Buscar produto..." />
 
-          <select id="filtro-categoria">
-            <option value="Todos">Todas as categorias</option>
-            <option value="Eletrônicos">Eletrônicos</option>
-            <option value="Acessórios">Acessórios</option>
-          </select>
+    <select id="filtro-categoria">
+      <option value="Todos">Todas as categorias</option>
+      <option value="Eletrônicos">Eletrônicos</option>
+      <option value="Acessórios">Acessórios</option>
+      <option value="Informática">Informática</option>
+    </select>
+
+    <select id="ordenar-produtos">
+      <option value="padrao">Ordenar por</option>
+      <option value="menor-preco">Menor preço</option>
+      <option value="maior-preco">Maior preço</option>
+      <option value="nome-az">Nome: A–Z</option>
+      <option value="nome-za">Nome: Z–A</option>
+    </select>
+
+    <!-- O botão Limpar filtros continua aqui -->
 
           <button type="button" id="limpar-filtros">Limpar filtros</button>
         </div>
