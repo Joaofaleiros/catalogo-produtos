@@ -215,6 +215,64 @@ footer {
 .modal[hidden] {
   display: none;
 }
+.modal:not([hidden]) {
+  animation: aparecer-modal 0.3s ease;
+}
+
+.modal:not([hidden]) .modal-conteudo {
+  animation: subir-modal 0.3s ease;
+}
+
+@keyframes aparecer-modal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes subir-modal {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.modal.fechando {
+  animation: desaparecer-modal 0.3s ease forwards;
+}
+
+.modal.fechando .modal-conteudo {
+  animation: descer-modal 0.3s ease forwards;
+}
+
+@keyframes desaparecer-modal {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes descer-modal {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+}
 
 .modal-conteudo {
   position: relative;

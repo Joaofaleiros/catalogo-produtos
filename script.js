@@ -194,17 +194,28 @@ renderizarProdutos(produtos);
 const modalProduto = document.getElementById("modal-produto");
 const fecharModal = document.getElementById("fechar-modal");
 
-fecharModal.addEventListener("click", () => {
-  modalProduto.hidden = true;
-});
+function fecharModalComAnimacao() {
+  modalProduto.classList.add("fechando");
+
+  modalProduto.addEventListener(
+    "animationend",
+    () => {
+      modalProduto.hidden = true;
+      modalProduto.classList.remove("fechando");
+    },
+    { once: true },
+  );
+}
+
+fecharModal.addEventListener("click", fecharModalComAnimacao);
 modalProduto.addEventListener("click", (event) => {
   if (event.target === modalProduto) {
-    modalProduto.hidden = true;
+    fecharModalComAnimacao();
   }
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    modalProduto.hidden = true;
+  if (event.key === "Escape" && !modalProduto.hidden) {
+    fecharModalComAnimacao();
   }
 });
